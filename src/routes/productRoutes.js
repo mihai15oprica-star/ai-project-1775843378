@@ -1,2 +1,12 @@
-7[1G[2K[38;5;12m⠋ 🦀 Thinking...[0m8[1G[2K[38;5;9m✘ ❌ Request failed
-[0m
+const express = require('express');
+const router = express.Router();
+
+// TEST ROUTE
+router.get('/', (req, res) => {
+  res.json({
+    success: true,
+    message: "API products works 🔥"
+  });
+});
+
+module.exports = router;
