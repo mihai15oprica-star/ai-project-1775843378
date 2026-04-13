@@ -4,10 +4,12 @@ const { v4: uuidv4 } = require('uuid');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+const productRoutes = require('./src/routes/productRoutes');
 
 // ─── Middleware ───────────────────────────────────────────────
 app.use(cors());
 app.use(express.json());
+app.use('/api/products', productRoutes);
 
 // ─── In-memory data store ────────────────────────────────────
 let products = [
